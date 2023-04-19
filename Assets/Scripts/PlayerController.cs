@@ -12,12 +12,19 @@ public class PlayerController : MonoBehaviour
     float horizontalInput;
     float verticalInput;
 
-    //Rotate
+    //Fire
+    [SerializeField] GameObject bulletPrefab;
+    [SerializeField] Transform firePos;
+    [SerializeField] float firePower;
 
     void Update()
     {
         PlayerMove();
         PlayerRotate();
+        if (Input.GetMouseButtonDown(0))
+        {
+            Fire();
+        }
     }
 
     void PlayerMove()
@@ -37,5 +44,10 @@ public class PlayerController : MonoBehaviour
         Vector3 direction = mousePosition - transform.position;
         direction.y = 0f;
         transform.rotation = Quaternion.LookRotation(direction);
+    }
+
+    void Fire()
+    {
+        GameObject bullet = Instantiate(bulletPrefab, firePos.transform.position, firePos.transform.rotation);
     }
 }
