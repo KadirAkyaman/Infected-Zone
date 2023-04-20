@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
         mousePosition.z = Camera.main.transform.position.y - transform.position.y;
         mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
 
-        // Karakterin yönünü belirle
+
         Vector3 direction = mousePosition - transform.position;
         direction.y = 0f;
         transform.rotation = Quaternion.LookRotation(direction);

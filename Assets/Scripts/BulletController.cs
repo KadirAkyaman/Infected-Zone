@@ -10,11 +10,14 @@ public class BulletController : MonoBehaviour
     {
         bulletRb = GetComponent<Rigidbody>();
         bulletRb.AddForce(transform.forward * fireSpeed);
-        Destroy(gameObject, 2);
+        Destroy(gameObject, 10);
     }
 
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.gameObject.CompareTag("Zombie"))
+        {
+            Destroy(gameObject);
+        }
     }
 }
