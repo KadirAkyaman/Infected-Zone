@@ -135,8 +135,9 @@ GameObject:
   - component: {fileID: 953628}
   - component: {fileID: 953627}
   - component: {fileID: 953626}
-  - component: {fileID: 953625}
   - component: {fileID: 953630}
+  - component: {fileID: 953625}
+  - component: {fileID: 953631}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -161,6 +162,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 7250735518577988254, guid: 5c0265d8ca60d3d47829c760a0179fa4, type: 3}
   firePos: {fileID: 478218914}
   firePower: 100000
+  maxHealth: 100
+  currentHealth: 100
 --- !u!65 &953626
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -256,6 +259,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!114 &953631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 953624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b723d82bc6b32a24b9fc836c2eff3f7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materials:
+  - {fileID: 2100000, guid: eff05244b1666f6428f5ffac13fdd549, type: 2}
+  - {fileID: 2100000, guid: 62387160a17107e42a30a466cc949fc7, type: 2}
 --- !u!1 &478218913
 GameObject:
   m_ObjectHideFlags: 0
@@ -687,6 +705,10 @@ PrefabInstance:
     - target: {fileID: 7696536476071351694, guid: 75cd788e5edf33f498789cc7a79597fa, type: 3}
       propertyPath: bulletPower
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7696536476071351694, guid: 75cd788e5edf33f498789cc7a79597fa, type: 3}
+      propertyPath: remainingHit
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7696536476071351695, guid: 75cd788e5edf33f498789cc7a79597fa, type: 3}
       propertyPath: m_Constraints

@@ -17,6 +17,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Transform firePos;
     [SerializeField] float firePower;
 
+    //Health
+    [SerializeField] float maxHealth;
+    public float currentHealth;
+
+    void Start()
+    {
+        currentHealth = maxHealth;
+    }
+
     void Update()
     {
         PlayerMove();
@@ -30,8 +39,9 @@ public class PlayerController : MonoBehaviour
     void PlayerMove()
     {
         verticalInput = Input.GetAxis("Vertical");
-
+        horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.forward * verticalInput * speed * Time.deltaTime);
+        transform.Translate(Vector3.right * horizontalInput * speed * Time.deltaTime);
     }
 
     void PlayerRotate()
