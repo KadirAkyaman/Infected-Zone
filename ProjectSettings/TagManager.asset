@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Bullet
   - Zombie
+  - Demon
+  - DemonBullet
+  - PlayerFirePos
+  - DemonFirePos
+  - SpawnManager
   layers:
   - Default
   - TransparentFX

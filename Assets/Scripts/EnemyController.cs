@@ -9,20 +9,70 @@ public class EnemyController : MonoBehaviour
     [SerializeField] float bulletPower;
     [SerializeField] int remainingHit;
 
+    //Demon Attack
+    [SerializeField] GameObject bulletPrefab;
+    [SerializeField] Transform demonFirePos;
+
+    //Attack Time Components
+    float nextAttackTime = 0f;
+    float intervalTime = 2f;
 
     void Start()
     {
-
+        player = GameObject.Find("Player").GetComponent<Transform>();//Attach player
+        if (gameObject.CompareTag("Demon"))
+        {
+            demonFirePos = GameObject.FindWithTag("DemonFirePos").GetComponent<Transform>();
+        }
     }
 
     void Update()
     {
-        MoveToPlayer();
 
-        DeathController();
+        if (gameObject.CompareTag("Zombie"))
+        {
+            ZombieMoveToPlayer();
+
+            DeathController();
+        }
+
+        if (gameObject.CompareTag("Demon"))
+        {
+            DemonMoveToPlayer();
+
+            DeathController();
+        }
     }
 
-    void MoveToPlayer()
+    
+
+    void DemonMoveToPlayer()
+    {
+        Vector3 playerDemonDistance = player.transform.position - transform.position;
+        float distance = Mathf.Sqrt(Mathf.Pow(playerDemonDistance.x, 2) + Mathf.Pow(playerDemonDistance.z, 2));
+        if (distance>8)
+        {
+            transform.LookAt(player);//player adlý objeye döndür
+            transform.position += transform.forward * speed * Time.deltaTime;//Player adlý objeye doðru hareket et
+        }
+        else
+        {
+            transform.LookAt(player);
+            if (Time.time > nextAttackTime)
+            {
+                nextAttackTime = Time.time + intervalTime;
+                DemonAttack();
+
+            }
+        }
+    }
+
+    void DemonAttack()
+    {
+        GameObject bullet = Instantiate(bulletPrefab, demonFirePos.transform.position, demonFirePos.transform.rotation);
+    }
+
+    void ZombieMoveToPlayer()
     {
         transform.LookAt(player);//player adlý objeye döndür
         transform.position += transform.forward * speed * Time.deltaTime;//Player adlý objeye doðru hareket et
@@ -30,7 +80,7 @@ public class EnemyController : MonoBehaviour
 
     void DeathController()
     {
-        if (remainingHit<=0)
+        if (remainingHit <= 0)
         {
             Destroy(gameObject);
         }

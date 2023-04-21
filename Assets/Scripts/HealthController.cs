@@ -38,7 +38,18 @@ public class HealthController : MonoBehaviour
     IEnumerator HitColor()
     {
         playerMesh.material = materials[1];
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.2f);
         playerMesh.material = materials[0];
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("DemonBullet"))
+        {
+            playerController.currentHealth -= 10;
+            Debug.Log(playerController.currentHealth);
+            StartCoroutine(HitColor());
+        }
+    }
+
 }
