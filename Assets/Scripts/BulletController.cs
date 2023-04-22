@@ -25,9 +25,20 @@ public class BulletController : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Zombie") || other.gameObject.CompareTag("Demon") || other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Zombie") || other.gameObject.CompareTag("Demon"))
         {
             Destroy(gameObject);
+        }
+        if (other.gameObject.CompareTag("Player"))
+        {
+            if (gameObject.CompareTag("DemonBullet"))
+            {
+                Destroy(gameObject);
+            }
+        }
+        if (other.gameObject.CompareTag("DemonBullet"))
+        {
+            Destroy(other.gameObject);
         }
     }
 

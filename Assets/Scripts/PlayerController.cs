@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Camera mainCamera;
 
     //Move
-    [SerializeField] float speed;
+    public float speed;
     float horizontalInput;
     float verticalInput;
 

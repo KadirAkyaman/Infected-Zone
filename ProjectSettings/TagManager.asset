@@ -11,6 +11,8 @@ TagManager:
   - PlayerFirePos
   - DemonFirePos
   - SpawnManager
+  - Health
+  - Speed
   layers:
   - Default
   - TransparentFX
