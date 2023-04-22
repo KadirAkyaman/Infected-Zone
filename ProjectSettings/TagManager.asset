@@ -13,6 +13,9 @@ TagManager:
   - SpawnManager
   - Health
   - Speed
+  - YellowXp
+  - OrangeXp
+  - Xp
   layers:
   - Default
   - TransparentFX

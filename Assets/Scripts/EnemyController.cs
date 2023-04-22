@@ -9,6 +9,10 @@ public class EnemyController : MonoBehaviour
     [SerializeField] float bulletPower;
     [SerializeField] int remainingHit;
 
+    //XP Components
+    [SerializeField] GameObject xpPrefab;
+
+
     //Demon Attack
     [SerializeField] GameObject bulletPrefab;
     [SerializeField] Transform demonFirePos;
@@ -83,6 +87,7 @@ public class EnemyController : MonoBehaviour
         if (remainingHit <= 0)
         {
             Destroy(gameObject);
+            GameObject xp = Instantiate(xpPrefab, transform.position, xpPrefab.transform.rotation);
         }
     }
 

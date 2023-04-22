@@ -21,9 +21,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float maxHealth;
     public float currentHealth;
 
+    //XP
+    public float playerXp;
+
     void Start()
     {
         currentHealth = maxHealth;
+        playerXp = 0;
     }
 
     void Update()

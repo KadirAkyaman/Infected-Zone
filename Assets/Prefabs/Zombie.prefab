@@ -31,7 +31,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 9.85, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -131,5 +131,6 @@ MonoBehaviour:
   speed: 1
   bulletPower: 20
   remainingHit: 3
+  xpPrefab: {fileID: 4894815796486279093, guid: 6856711e52b895645b90a081adf02bc9, type: 3}
   bulletPrefab: {fileID: 0}
-  firePos: {fileID: 0}
+  demonFirePos: {fileID: 0}

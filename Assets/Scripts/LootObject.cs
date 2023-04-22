@@ -19,14 +19,12 @@ public class LootObject : MonoBehaviour
         {
             playerController.currentHealth += healthAmount;
             Destroy(other.gameObject);
-            Debug.Log(playerController.currentHealth);
         }
 
-        if (other.gameObject.CompareTag("Speed"))              //HEALTH
+        if (other.gameObject.CompareTag("Speed"))              //SPEED
         {
             playerController.speed += speedAmount;
             Destroy(other.gameObject);
-            Debug.Log(playerController.speed);
             StartCoroutine(speenController());
         }
     }
@@ -35,6 +33,5 @@ public class LootObject : MonoBehaviour
     {
         yield return new WaitForSeconds(5);
         playerController.speed -= speedAmount;
-        Debug.Log(playerController.speed);
     }
 }

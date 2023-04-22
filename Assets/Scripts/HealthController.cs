@@ -30,7 +30,6 @@ public class HealthController : MonoBehaviour
                 nextAttackTime = Time.time + intervalTime;
                 playerController.currentHealth -= 10;
                 StartCoroutine(HitColor());
-                Debug.Log(playerController.currentHealth);
             }
         }
     }
@@ -47,7 +46,6 @@ public class HealthController : MonoBehaviour
         if (other.gameObject.CompareTag("DemonBullet"))
         {
             playerController.currentHealth -= 10;
-            Debug.Log(playerController.currentHealth);
             StartCoroutine(HitColor());
         }
     }

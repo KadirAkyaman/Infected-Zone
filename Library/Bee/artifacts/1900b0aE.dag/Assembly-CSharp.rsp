@@ -360,6 +360,7 @@
 "Assets/Scripts/LootObject.cs"
 "Assets/Scripts/PlayerController.cs"
 "Assets/Scripts/SpawnManager.cs"
+"Assets/Scripts/XPController.cs"
 -langversion:9.0
 
 /deterministic
