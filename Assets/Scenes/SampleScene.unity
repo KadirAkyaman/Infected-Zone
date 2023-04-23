@@ -163,6 +163,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 7250735518577988254, guid: 5c0265d8ca60d3d47829c760a0179fa4, type: 3}
   firePos: {fileID: 2139309018}
   firePower: 100000
+  attackTime: 0.2
   maxHealth: 100
   currentHealth: 100
   playerXp: 0
@@ -237,7 +238,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 953624}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 3.98}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -276,6 +277,7 @@ MonoBehaviour:
   materials:
   - {fileID: 2100000, guid: eff05244b1666f6428f5ffac13fdd549, type: 2}
   - {fileID: 2100000, guid: 62387160a17107e42a30a466cc949fc7, type: 2}
+  zombiePower: 10
 --- !u!114 &953632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,6 +292,54 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthAmount: 20
   speedAmount: 5
+--- !u!1 &634325309
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 634325311}
+  - component: {fileID: 634325312}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &634325311
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634325309}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.382221, y: 3.270108, z: 0.6066577}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &634325312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634325309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29f6cc3e66d9cff49ae33fd7a96fba93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireSpeed: 2500
+  bulletPower: 50
+  demonBulletPower: 20
+  demonBulletSpeed: 7
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,6 +532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: {x: 0, y: 20, z: 0}
+  zoomSpeed: 4
 --- !u!1 &1273863293
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class HealthController : MonoBehaviour
 {
-    //Player Controller Script
+    //Attach Scripts
     PlayerController playerController;
+    GameManager gameManager;
 
     //Attack Time Components
     float nextAttackTime = 0f;
@@ -15,9 +16,13 @@ public class HealthController : MonoBehaviour
     MeshRenderer playerMesh;
     [SerializeField] Material[] materials;
 
+    //Zombie Power
+    [SerializeField]float zombiePower;
+
     private void Start()
     {
         playerController = GetComponent<PlayerController>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         playerMesh = GetComponent<MeshRenderer>();
     }
 
@@ -28,7 +33,7 @@ public class HealthController : MonoBehaviour
             if (Time.time > nextAttackTime)
             {
                 nextAttackTime = Time.time + intervalTime;
-                playerController.currentHealth -= 10;
+                playerController.currentHealth -= zombiePower;
                 StartCoroutine(HitColor());
             }
         }
@@ -45,7 +50,7 @@ public class HealthController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("DemonBullet"))
         {
-            playerController.currentHealth -= 10;
+            playerController.currentHealth -= gameManager.demonBulletPower;
             StartCoroutine(HitColor());
         }
     }

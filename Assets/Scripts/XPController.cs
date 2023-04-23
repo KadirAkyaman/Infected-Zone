@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class XPController : MonoBehaviour
 {
-    Rigidbody xpRb;
     Transform player;
     [SerializeField] float speed = 10;
     [SerializeField] float xpAmount;
@@ -16,7 +15,6 @@ public class XPController : MonoBehaviour
     PlayerController playerController;
     void Start()
     {
-        xpRb = GetComponent<Rigidbody>();
         player = GameObject.Find("Player").GetComponent<Transform>();//Attach player
         playerController = GameObject.Find("Player").GetComponent<PlayerController>();
     }

@@ -6,8 +6,7 @@ public class EnemyController : MonoBehaviour
 {
     [SerializeField] Transform player;
     [SerializeField] float speed;
-    [SerializeField] float bulletPower;
-    [SerializeField] int remainingHit;
+    [SerializeField] int health;
 
     //XP Components
     [SerializeField] GameObject xpPrefab;
@@ -15,18 +14,23 @@ public class EnemyController : MonoBehaviour
 
     //Demon Attack
     [SerializeField] GameObject bulletPrefab;
-    [SerializeField] Transform demonFirePos;
+    Transform demonFirePos;
+    [SerializeField] float demonAttackDistance;
 
     //Attack Time Components
     float nextAttackTime = 0f;
     float intervalTime = 2f;
 
+    //Attach BulletController Script
+    GameManager gameManager;
+
     void Start()
     {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         player = GameObject.Find("Player").GetComponent<Transform>();//Attach player
         if (gameObject.CompareTag("Demon"))
         {
-            demonFirePos = GameObject.FindWithTag("DemonFirePos").GetComponent<Transform>();
+            demonFirePos = transform.GetChild(0);
         }
     }
 
@@ -54,7 +58,7 @@ public class EnemyController : MonoBehaviour
     {
         Vector3 playerDemonDistance = player.transform.position - transform.position;
         float distance = Mathf.Sqrt(Mathf.Pow(playerDemonDistance.x, 2) + Mathf.Pow(playerDemonDistance.z, 2));
-        if (distance>8)
+        if (distance>demonAttackDistance)
         {
             transform.LookAt(player);//player adlý objeye döndür
             transform.position += transform.forward * speed * Time.deltaTime;//Player adlý objeye doðru hareket et
@@ -84,7 +88,7 @@ public class EnemyController : MonoBehaviour
 
     void DeathController()
     {
-        if (remainingHit <= 0)
+        if (health <= 0)
         {
             Destroy(gameObject);
             GameObject xp = Instantiate(xpPrefab, transform.position, xpPrefab.transform.rotation);
@@ -95,8 +99,8 @@ public class EnemyController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Bullet"))
         {
-            transform.position -= transform.forward * bulletPower * Time.deltaTime;
-            remainingHit--;
+            transform.position -= transform.forward * gameManager.bulletPower * Time.deltaTime;
+            health -= gameManager.bulletPower;
         }
     }
 

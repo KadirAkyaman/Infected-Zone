@@ -17,12 +17,17 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Transform firePos;
     [SerializeField] float firePower;
 
+    //Attack Time Components
+    float nextAttackTime = 0f;
+    [SerializeField] float attackTime;
+
     //Health
     [SerializeField] float maxHealth;
     public float currentHealth;
 
     //XP
     public float playerXp;
+
 
     void Start()
     {
@@ -34,9 +39,14 @@ public class PlayerController : MonoBehaviour
     {
         PlayerMove();
         PlayerRotate();
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0))
         {
-            Fire();
+            if (Time.time > nextAttackTime)
+            {
+                nextAttackTime = Time.time + attackTime;
+                Fire();
+
+            }
         }
     }
 
