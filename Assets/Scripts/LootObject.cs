@@ -27,6 +27,11 @@ public class LootObject : MonoBehaviour
             Destroy(other.gameObject);
             StartCoroutine(speenController());
         }
+
+        if (other.gameObject.CompareTag("Boost"))              //Boost
+        {
+            Destroy(other.gameObject);
+        }
     }
 
     IEnumerator speenController()

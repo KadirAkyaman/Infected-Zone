@@ -95,9 +95,9 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.gameObject.CompareTag("Bullet"))
+        if (collision.gameObject.CompareTag("Bullet"))
         {
             transform.position -= transform.forward * gameManager.bulletPower * Time.deltaTime;
             health -= gameManager.bulletPower;

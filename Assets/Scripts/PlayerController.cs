@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     //Fire
     [SerializeField] GameObject bulletPrefab;
     [SerializeField] Transform firePos;
-    [SerializeField] float firePower;
+    public float firePower;
 
     //Attack Time Components
     float nextAttackTime = 0f;

@@ -26,33 +26,47 @@ public class BulletController : MonoBehaviour
     {
         MoveToPlayer();
     }
-    private void OnTriggerEnter(Collider other)
+
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.gameObject.CompareTag("Zombie") || other.gameObject.CompareTag("Demon"))
+        if (collision.gameObject.CompareTag("Zombie") || collision.gameObject.CompareTag("Demon"))
         {
             if (gameObject.CompareTag("Bullet"))
             {
                 Destroy(gameObject);
             }
         }
-        if (other.gameObject.CompareTag("Player"))
+
+        if (collision.gameObject.CompareTag("Zombie") || collision.gameObject.CompareTag("Demon"))
+        {
+            if (gameObject.CompareTag("Bullet"))
+            {
+                Destroy(gameObject);
+            }
+        }
+        if (collision.gameObject.CompareTag("Player"))
         {
             if (gameObject.CompareTag("DemonBullet"))
             {
                 Destroy(gameObject);
             }
         }
-        if (other.gameObject.CompareTag("DemonBullet"))//Destroy demon bullet if touch a bullet or player
+        if (collision.gameObject.CompareTag("DemonBullet"))//Destroy demon bullet if touch a bullet or player
         {
             if (gameObject.CompareTag("Bullet"))
             {
-                Destroy(other.gameObject);
+                Destroy(collision.gameObject);
                 Destroy(gameObject);
             }
             else if (gameObject.CompareTag("Player"))
             {
-                Destroy(other.gameObject);
+                Destroy(collision.gameObject);
             }
+        }
+
+        if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Barrel"))
+        {
+            Destroy(gameObject);
         }
     }
 

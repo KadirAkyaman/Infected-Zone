@@ -46,9 +46,10 @@ public class HealthController : MonoBehaviour
         playerMesh.material = materials[0];
     }
 
-    private void OnTriggerEnter(Collider other)
+
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.gameObject.CompareTag("DemonBullet"))
+        if (collision.gameObject.CompareTag("DemonBullet"))
         {
             playerController.currentHealth -= gameManager.demonBulletPower;
             StartCoroutine(HitColor());

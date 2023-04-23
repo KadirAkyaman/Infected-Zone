@@ -16,6 +16,10 @@ TagManager:
   - YellowXp
   - OrangeXp
   - Xp
+  - FxTemporaire
+  - Wall
+  - Barrel
+  - Boost
   layers:
   - Default
   - TransparentFX
