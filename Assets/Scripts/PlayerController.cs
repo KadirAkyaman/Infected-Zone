@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    Rigidbody playerRb;
+
     //Camera
     [SerializeField] Camera mainCamera;
 
@@ -31,14 +33,20 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        playerRb = GetComponent<Rigidbody>();
         currentHealth = maxHealth;
         playerXp = 0;
     }
 
-    void Update()
+    private void FixedUpdate()
     {
         PlayerMove();
         PlayerRotate();
+    }
+
+    void Update()
+    {
+        playerRb.velocity = new Vector3(0,0,0);
         if (Input.GetMouseButton(0))
         {
             if (Time.time > nextAttackTime)

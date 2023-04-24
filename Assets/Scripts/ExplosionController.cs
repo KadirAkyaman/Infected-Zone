@@ -29,9 +29,10 @@ public class ExplosionController : MonoBehaviour
         {
             Rigidbody rb = hit.GetComponent<Rigidbody>();
 
-            if (rb != null && !rb.gameObject.CompareTag("Player"))
+            if (rb != null && !rb.gameObject.CompareTag("Player") && !rb.gameObject.CompareTag("Wall") && !rb.gameObject.CompareTag("Xp"))
             {
                 rb.AddExplosionForce(explosionForce, transform.position, explosionRadius);
+                Destroy(rb.gameObject);
             }
         }
 
@@ -39,5 +40,10 @@ public class ExplosionController : MonoBehaviour
         Destroy(gameObject);
     }
 
-    
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, explosionRadius);
+    }
+
 }

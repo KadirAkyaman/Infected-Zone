@@ -9,6 +9,9 @@ public class EnemyController : MonoBehaviour
     [SerializeField] int health;
     Rigidbody enemyRb;
 
+    //TOUCH PLAYER
+    public bool touchPlayer;
+
     //XP Components
     [SerializeField] GameObject xpPrefab;
 
@@ -63,8 +66,8 @@ public class EnemyController : MonoBehaviour
         float distance = Mathf.Sqrt(Mathf.Pow(playerDemonDistance.x, 2) + Mathf.Pow(playerDemonDistance.z, 2));
         if (distance>demonAttackDistance)
         {
-            transform.LookAt(player);//player adlý objeye döndür
-            transform.position += transform.forward * speed * Time.deltaTime;//Player adlý objeye doðru hareket et
+            transform.LookAt(player);
+            transform.Translate(Vector3.forward * speed * Time.deltaTime);
         }
         else
         {
@@ -86,7 +89,10 @@ public class EnemyController : MonoBehaviour
     void ZombieMoveToPlayer()
     {
         transform.LookAt(player);//player adlý objeye döndür
-        transform.position += transform.forward * speed * Time.deltaTime;//Player adlý objeye doðru hareket et
+        if (!touchPlayer)
+        {
+            transform.Translate(Vector3.forward * speed * Time.deltaTime);//Player adlý objeye doðru hareket et
+        }
     }
 
     void DeathController()
@@ -108,6 +114,19 @@ public class EnemyController : MonoBehaviour
         {
             transform.position -= transform.forward * gameManager.bulletPower * Time.deltaTime;
             health -= gameManager.bulletPower;
+        }
+
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            touchPlayer = true;
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            touchPlayer = false;
         }
     }
 
