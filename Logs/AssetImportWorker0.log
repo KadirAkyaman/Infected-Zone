@@ -15,7 +15,7 @@ C:/Users/Kadir/Desktop/Infected Zone/Infected Zone
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-52093
+55812
 Successfully changed project path to: C:/Users/Kadir/Desktop/Infected Zone/Infected Zone
 C:/Users/Kadir/Desktop/Infected Zone/Infected Zone
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Users/Kadir/Desktop/Infected Zone/Infected Zone
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 96.05 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 96.28 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.14f1 (eee1884e7226)
 [Subsystems] Discovering subsystems at path D:/Uygulamalar/UNITY/Editor/2021.3.14f1/Editor/Data/Resources/UnitySubsystems
@@ -63,92 +63,92 @@ Initialize mono
 Mono path[0] = 'D:/Uygulamalar/UNITY/Editor/2021.3.14f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Uygulamalar/UNITY/Editor/2021.3.14f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'D:/Uygulamalar/UNITY/Editor/2021.3.14f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56272
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56888
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Uygulamalar/UNITY/Editor/2021.3.14f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: D:/Uygulamalar/UNITY/Editor/2021.3.14f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.004168 seconds.
+Registered in 0.003452 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 90.39 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 94.60 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.671 seconds
+- Completed reload, in  0.682 seconds
 Domain Reload Profiling:
-	ReloadAssembly (671ms)
-		BeginReloadAssembly (74ms)
+	ReloadAssembly (682ms)
+		BeginReloadAssembly (70ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (480ms)
-			LoadAssemblies (74ms)
+		EndReloadAssembly (510ms)
+			LoadAssemblies (70ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (128ms)
+			SetupTypeCache (102ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (30ms)
-			SetupLoadedEditorAssemblies (272ms)
+			RebuildScriptCaches (29ms)
+			SetupLoadedEditorAssemblies (334ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (7ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (91ms)
+				RefreshPlugins (95ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (127ms)
-				ProcessInitializeOnLoadMethodAttributes (46ms)
+				ProcessInitializeOnLoadAttributes (179ms)
+				ProcessInitializeOnLoadMethodAttributes (50ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.006928 seconds.
+Registered in 0.007211 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\Kadir\Desktop\Infected Zone\Infected Zone\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\Kadir\Desktop\Infected Zone\Infected Zone\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.62 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.77 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.046 seconds
+- Completed reload, in  1.030 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1047ms)
-		BeginReloadAssembly (104ms)
+	ReloadAssembly (1031ms)
+		BeginReloadAssembly (108ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (6ms)
+			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (19ms)
-		EndReloadAssembly (837ms)
-			LoadAssemblies (82ms)
+			CreateAndSetChildDomain (20ms)
+		EndReloadAssembly (799ms)
+			LoadAssemblies (85ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
 			SetupTypeCache (272ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (52ms)
-			SetupLoadedEditorAssemblies (385ms)
+			RebuildScriptCaches (50ms)
+			SetupLoadedEditorAssemblies (357ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (5ms)
-				SetLoadedEditorAssemblies (1ms)
+				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (95ms)
-				ProcessInitializeOnLoadAttributes (248ms)
-				ProcessInitializeOnLoadMethodAttributes (33ms)
+				BeforeProcessingInitializeOnLoad (87ms)
+				ProcessInitializeOnLoadAttributes (238ms)
+				ProcessInitializeOnLoadMethodAttributes (23ms)
 				AfterProcessingInitializeOnLoad (3ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (8ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.69 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 0.76 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3400 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 27 unused Assets / (114.0 KB). Loaded Objects now: 3864.
-Memory consumption went from 195.1 MB to 195.0 MB.
-Total: 3.592400 ms (FindLiveObjects: 0.281800 ms CreateObjectMapping: 0.251200 ms MarkObjects: 2.913900 ms  DeleteObjects: 0.144300 ms)
+Unloading 3398 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 27 unused Assets / (114.2 KB). Loaded Objects now: 3864.
+Memory consumption went from 195.2 MB to 195.1 MB.
+Total: 4.210100 ms (FindLiveObjects: 0.301100 ms CreateObjectMapping: 0.247300 ms MarkObjects: 3.525900 ms  DeleteObjects: 0.134700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -162,46 +162,70 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 14208.953450 seconds.
-  path: Assets/Supercyan Character Pack Zombie Sample/Prefabs/SimpleMovement
-  artifactKey: Guid(e77aed1e4c0701c4fa932f1e9c908208) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Supercyan Character Pack Zombie Sample/Prefabs/SimpleMovement using Guid(e77aed1e4c0701c4fa932f1e9c908208) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27742b185ac0d2082a3b33d2094d95b0') in 0.007400 seconds 
+  Time since last request: 24032.091621 seconds.
+  path: Assets/AssetStore/SurvivalStylizedCharacters/Assets/Prefabs/Characters
+  artifactKey: Guid(feef466f358da214d9d78d9829faa434) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetStore/SurvivalStylizedCharacters/Assets/Prefabs/Characters using Guid(feef466f358da214d9d78d9829faa434) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1e51f3c1eb989c2ed358e3071a07e9c') in 0.012487 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Supercyan Character Pack Zombie Sample/Prefabs
-  artifactKey: Guid(32fcfbac277f4a9469bbe5363f81f911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Supercyan Character Pack Zombie Sample/Prefabs using Guid(32fcfbac277f4a9469bbe5363f81f911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10ac27f958ec141da23869ea072f16f1') in 0.001577 seconds 
+  Time since last request: 0.000049 seconds.
+  path: Assets/AssetStore/SurvivalStylizedCharacters/Assets/Prefabs/Characters/char_3.prefab
+  artifactKey: Guid(1b4f3625cd6fe4244acde69f896d820e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetStore/SurvivalStylizedCharacters/Assets/Prefabs/Characters/char_3.prefab using Guid(1b4f3625cd6fe4244acde69f896d820e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87edda112bb6764e1aa9a9b7f0e994a1') in 0.338399 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/Supercyan Character Pack Zombie Sample/Prefabs/SimpleMovement/Mobile/MobileFreeZombieSimpleMovement.prefab
-  artifactKey: Guid(2869f50f08793594889040a0ec4b691e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Supercyan Character Pack Zombie Sample/Prefabs/SimpleMovement/Mobile/MobileFreeZombieSimpleMovement.prefab using Guid(2869f50f08793594889040a0ec4b691e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a57faabd1cd0649fd3b97c9a5af4098') in 0.378390 seconds 
+  Time since last request: 0.000039 seconds.
+  path: Assets/AssetStore/SurvivalStylizedCharacters/Assets/Prefabs/Characters/char_2.prefab
+  artifactKey: Guid(5b7601361e8b568479838ce82b7809d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetStore/SurvivalStylizedCharacters/Assets/Prefabs/Characters/char_2.prefab using Guid(5b7601361e8b568479838ce82b7809d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '174dfd7e6be6acc5ec0fbf214340ca9d') in 0.027506 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 19.632820 seconds.
-  path: Assets/Supercyan Character Pack Zombie Sample/Animations/free_sample_zombie@zombie_attack.FBX
-  artifactKey: Guid(31c1a2a498086974eaa9d10c7f42d24d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Supercyan Character Pack Zombie Sample/Animations/free_sample_zombie@zombie_attack.FBX using Guid(31c1a2a498086974eaa9d10c7f42d24d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7469bf6bc59593ba0d866f952e38d0ca') in 0.019680 seconds 
+  Time since last request: 29.492223 seconds.
+  path: Assets/AssetStore/SurvivalStylizedCharacters/Assets/Materials/colors.psd
+  artifactKey: Guid(dc4d02dc60ca8b9448d5184b07170381) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetStore/SurvivalStylizedCharacters/Assets/Materials/colors.psd using Guid(dc4d02dc60ca8b9448d5184b07170381) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f94926b2308a22ffa930a62e2dea4a52') in 0.026301 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Supercyan Character Pack Zombie Sample/Animations/free_sample_zombie@zombie_walk_forward.FBX
-  artifactKey: Guid(834e65f16fa33e54da306a0c84cb2df6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Supercyan Character Pack Zombie Sample/Animations/free_sample_zombie@zombie_walk_forward.FBX using Guid(834e65f16fa33e54da306a0c84cb2df6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2b197ac8ff7b2e8b98cfbbcc362c9f9') in 0.005320 seconds 
+  Time since last request: 0.000022 seconds.
+  path: Assets/AssetStore/SurvivalStylizedCharacters/Assets/Materials/Grid.mat
+  artifactKey: Guid(6f30b5440e8b05d4baeb4c76d3da59b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetStore/SurvivalStylizedCharacters/Assets/Materials/Grid.mat using Guid(6f30b5440e8b05d4baeb4c76d3da59b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b30c6da4aa7176cb6f64bb170d312bd') in 0.150637 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/Supercyan Character Pack Zombie Sample/Animations/free_sample_zombie@zombie_walk_backwards.FBX
-  artifactKey: Guid(170ca84ebfa7e0e42ba6f49d42cd0c51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Supercyan Character Pack Zombie Sample/Animations/free_sample_zombie@zombie_walk_backwards.FBX using Guid(170ca84ebfa7e0e42ba6f49d42cd0c51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a213423380b8fe2b4ba591542d8b1db1') in 0.006171 seconds 
+  Time since last request: 0.889204 seconds.
+  path: Assets/AssetStore/SurvivalStylizedCharacters/Assets/Prefabs/Weapons/assault_rifle_fbx.prefab
+  artifactKey: Guid(75c5731fae2da124980869e2e8446d76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetStore/SurvivalStylizedCharacters/Assets/Prefabs/Weapons/assault_rifle_fbx.prefab using Guid(75c5731fae2da124980869e2e8446d76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad17c03f008801b2e1c8c964ac02b2cc') in 0.014802 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Supercyan Character Pack Zombie Sample/Animations/free_sample_zombie@zombie_idle.FBX
-  artifactKey: Guid(0aaab721d87c3d84daddd7c7a85d44fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Supercyan Character Pack Zombie Sample/Animations/free_sample_zombie@zombie_idle.FBX using Guid(0aaab721d87c3d84daddd7c7a85d44fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0da9a53233510ad298c794321c48b057') in 0.006064 seconds 
+  Time since last request: 0.000033 seconds.
+  path: Assets/AssetStore/SurvivalStylizedCharacters/Assets/Prefabs/Weapons/pistol_fbx.prefab
+  artifactKey: Guid(c3e70504d31929042899b5067e88eb1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetStore/SurvivalStylizedCharacters/Assets/Prefabs/Weapons/pistol_fbx.prefab using Guid(c3e70504d31929042899b5067e88eb1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1c9a348359a207f1a1438871edf557c') in 0.016692 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 79.647388 seconds.
+  path: Assets/AssetStore/VillegasArts/LowPoly Shotguns/Prefabs/shotgun02.prefab
+  artifactKey: Guid(77f4892355b1f714296eab95688bf51f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetStore/VillegasArts/LowPoly Shotguns/Prefabs/shotgun02.prefab using Guid(77f4892355b1f714296eab95688bf51f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cee44dbc217c0aa196b356ef0ecd7818') in 0.015588 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/AssetStore/VillegasArts/LowPoly Shotguns/Prefabs/shotgun04.prefab
+  artifactKey: Guid(be6a3504ed2d5a841b0622c43663d0f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetStore/VillegasArts/LowPoly Shotguns/Prefabs/shotgun04.prefab using Guid(be6a3504ed2d5a841b0622c43663d0f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87322a729cb71635279841d48ff06598') in 0.009678 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/AssetStore/VillegasArts/LowPoly Shotguns/Prefabs/shotgun03.prefab
+  artifactKey: Guid(cfa686cb65c73744aa1cce2760c5d580) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetStore/VillegasArts/LowPoly Shotguns/Prefabs/shotgun03.prefab using Guid(cfa686cb65c73744aa1cce2760c5d580) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '759c02a568c4060675eba18cd48360ce') in 0.014785 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/AssetStore/VillegasArts/LowPoly Shotguns/Prefabs/shotgun05.prefab
+  artifactKey: Guid(27297d906adadd0469e65edc8e37d5e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetStore/VillegasArts/LowPoly Shotguns/Prefabs/shotgun05.prefab using Guid(27297d906adadd0469e65edc8e37d5e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '593c29903caa17f3f0428bb14a7fe65d') in 0.009757 seconds 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting

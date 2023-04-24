@@ -14,15 +14,39 @@ public class AnimatorController : MonoBehaviour
 
     void Update()
     {
-        if (enemyController.touchedPlayer)
+        if (gameObject.CompareTag("Zombie"))
         {
-            animator.SetBool("isWalk",false);
-            animator.SetBool("isAttack", true);
+            if (enemyController.touchedPlayer)
+            {
+                animator.SetBool("isWalk", false);
+                animator.SetBool("isAttack", true);
+            }
+            else
+            {
+                animator.SetBool("isWalk", true);
+                animator.SetBool("isAttack", false);
+            }
         }
-        else
+
+        if (gameObject.CompareTag("Player"))
         {
-            animator.SetBool("isWalk", true);
-            animator.SetBool("isAttack", false);
+            if (Input.GetKey(KeyCode.W)|| Input.GetKey(KeyCode.S)|| Input.GetKey(KeyCode.A)|| Input.GetKey(KeyCode.D))
+            {
+                animator.SetBool("isMove",true);
+            }
+            else
+            {
+                animator.SetBool("isMove", false);
+            }
+
+            if (Input.GetMouseButton(0))
+            {
+                animator.SetBool("isFire", true);
+            }
+            else
+            {
+                animator.SetBool("isFire", false);
+            }
         }
     }
 }
