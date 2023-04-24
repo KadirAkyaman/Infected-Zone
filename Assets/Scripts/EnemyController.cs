@@ -10,7 +10,7 @@ public class EnemyController : MonoBehaviour
     Rigidbody enemyRb;
 
     //TOUCH PLAYER
-    public bool touchPlayer;
+    public bool touchedPlayer;
 
     //XP Components
     [SerializeField] GameObject xpPrefab;
@@ -89,7 +89,9 @@ public class EnemyController : MonoBehaviour
     void ZombieMoveToPlayer()
     {
         transform.LookAt(player);//player adlý objeye döndür
-        if (!touchPlayer)
+        transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
+        transform.position = new Vector3(transform.position.x, -0.51f, transform.position.z);
+        if (!touchedPlayer)
         {
             transform.Translate(Vector3.forward * speed * Time.deltaTime);//Player adlý objeye doðru hareket et
         }
@@ -118,7 +120,7 @@ public class EnemyController : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Player"))
         {
-            touchPlayer = true;
+            touchedPlayer = true;
         }
     }
 
@@ -126,7 +128,7 @@ public class EnemyController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            touchPlayer = false;
+            touchedPlayer = false;
         }
     }
 

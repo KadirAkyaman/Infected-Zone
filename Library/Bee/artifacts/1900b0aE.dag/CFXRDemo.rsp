@@ -340,9 +340,9 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/CFXRRuntime.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
-"Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/CFXR_Demo.cs"
-"Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/CFXR_Demo_Rotate.cs"
-"Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/CFXR_Demo_Translate.cs"
+"Assets/AssetStore/JMO Assets/Cartoon FX Remaster/Demo Assets/CFXR_Demo.cs"
+"Assets/AssetStore/JMO Assets/Cartoon FX Remaster/Demo Assets/CFXR_Demo_Rotate.cs"
+"Assets/AssetStore/JMO Assets/Cartoon FX Remaster/Demo Assets/CFXR_Demo_Translate.cs"
 -langversion:9.0
 
 /deterministic

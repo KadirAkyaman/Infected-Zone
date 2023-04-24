@@ -56,12 +56,12 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\JMO Assets\Welcome Screen\CFXR_WelcomeScreen.cs" />
+    <Compile Include="Assets\AssetStore\JMO Assets\Welcome Screen\CFXR_WelcomeScreen.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\JMO Assets\Welcome Screen\CFXR.WelcomeScreen.asmdef" />
-    <None Include="Assets\JMO Assets\Welcome Screen\CFXR_WelcomeScreen.uss" />
-    <None Include="Assets\JMO Assets\Welcome Screen\CFXR_WelcomeScreen.uxml" />
+    <None Include="Assets\AssetStore\JMO Assets\Welcome Screen\CFXR.WelcomeScreen.asmdef" />
+    <None Include="Assets\AssetStore\JMO Assets\Welcome Screen\CFXR_WelcomeScreen.uss" />
+    <None Include="Assets\AssetStore\JMO Assets\Welcome Screen\CFXR_WelcomeScreen.uxml" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -10,7 +10,7 @@ public class HealthController : MonoBehaviour
 
     //Attack Time Components
     float nextAttackTime = 0f;
-    float intervalTime = 2f;
+    float intervalTime = 1.75f;
 
     //Hit Effects
     MeshRenderer playerMesh;
@@ -41,6 +41,7 @@ public class HealthController : MonoBehaviour
 
     IEnumerator HitColor()
     {
+        yield return new WaitForSeconds(0.3f);
         playerMesh.material = materials[1];
         yield return new WaitForSeconds(0.2f);
         playerMesh.material = materials[0];
