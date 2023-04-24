@@ -90,6 +90,10 @@ public class EnemyController : MonoBehaviour
     {
         if (health <= 0)
         {
+            if (gameObject.CompareTag("Demon"))
+            {
+                //isDead = true;
+            }
             Destroy(gameObject);
             GameObject xp = Instantiate(xpPrefab, transform.position, xpPrefab.transform.rotation);
         }

@@ -6,19 +6,20 @@ public class EffectsController : MonoBehaviour
 {
     public GameObject[] collisionEffectPrefab; // Çarpýþma efekti
     public float effectDuration = 2.0f; // Efekt süresi
-    GameObject weaponBoost;
 
-    //Attach PlayerController
+
+    //Attach Scripts    
     PlayerController playerController;
+    EnemyController enemyController;
+
 
     private void Start()
     {
-        weaponBoost = GameObject.Find("BoostEffect");
-        if (gameObject.CompareTag("Player"))//eðer player isen efekti false yap. Sebebi bullette de bu olduðundan dolayý ateþ edince efekt iptal oluyor
-        {
-            weaponBoost.SetActive(false);
-        }
         playerController = GameObject.Find("Player").GetComponent<PlayerController>();
+        if (gameObject.CompareTag("Demon"))
+        {
+            enemyController = GetComponent<EnemyController>();
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -59,26 +60,6 @@ public class EffectsController : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (gameObject.CompareTag("Player"))
-        {
-            if (other.CompareTag("Boost"))
-            {
-                StartCoroutine(WeaponBoost());
-            }
-        }
-
-    }
-
-    IEnumerator WeaponBoost()
-    {
-        weaponBoost.SetActive(true);
-        playerController.firePower *= 2;                    //FIRE POWER * 2
-        yield return new WaitForSeconds(10);
-        weaponBoost.SetActive(false);
-        playerController.firePower /= 2;
-    }
 
     private void DestroyEffect()
     {

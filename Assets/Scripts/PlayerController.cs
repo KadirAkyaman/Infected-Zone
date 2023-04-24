@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float attackTime;
 
     //Health
-    [SerializeField] float maxHealth;
+    public float maxHealth;
     public float currentHealth;
 
     //XP

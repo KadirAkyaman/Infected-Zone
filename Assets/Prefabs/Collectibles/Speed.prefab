@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6709732344820778265}
   - component: {fileID: 6709732344820778264}
+  - component: {fileID: 530184642}
   m_Layer: 0
   m_Name: Speed
   m_TagString: Speed
@@ -47,6 +48,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.31296372, y: 0.71561205, z: 0.46501267}
   m_Center: {x: -0.000000029802322, y: -0.12248391, z: -0.000000059604645}
+--- !u!95 &530184642
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6709732344820778267}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fe07526a8b9cc60469421f6406912ebf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6709732344963512047
 GameObject:
   m_ObjectHideFlags: 0
