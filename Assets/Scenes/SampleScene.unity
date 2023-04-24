@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 963194227}
-  speed: 5
+  speed: 10
   bulletPrefab: {fileID: 7250735518577988254, guid: 5c0265d8ca60d3d47829c760a0179fa4, type: 3}
   firePos: {fileID: 2139309018}
   firePower: 100000
@@ -3159,6 +3159,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1028666645}
     m_Modifications:
+    - target: {fileID: 613337401, guid: 9e58406e66d3e0b4db03398a8f75ab0e, type: 3}
+      propertyPath: health
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 613337401, guid: 9e58406e66d3e0b4db03398a8f75ab0e, type: 3}
       propertyPath: demonAttackDistance
       value: 8

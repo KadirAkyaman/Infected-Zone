@@ -7,6 +7,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] Transform player;
     [SerializeField] float speed;
     [SerializeField] int health;
+    Rigidbody enemyRb;
 
     //XP Components
     [SerializeField] GameObject xpPrefab;
@@ -32,10 +33,12 @@ public class EnemyController : MonoBehaviour
         {
             demonFirePos = transform.GetChild(0);
         }
+        enemyRb = GetComponent<Rigidbody>();
     }
 
     void Update()
     {
+        enemyRb.velocity = new Vector3(0,0,0);
 
         if (gameObject.CompareTag("Zombie"))
         {
