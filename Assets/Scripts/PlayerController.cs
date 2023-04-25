@@ -30,6 +30,9 @@ public class PlayerController : MonoBehaviour
     //XP
     public float playerXp;
 
+    //Fire Effect
+    [SerializeField] ParticleSystem fireEffect;
+
 
     void Start()
     {
@@ -46,14 +49,14 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        playerRb.velocity = new Vector3(0,0,0);
+        fireEffect.transform.position = firePos.transform.position;
+        playerRb.velocity = new Vector3(0, 0, 0);
         if (Input.GetMouseButton(0))
         {
             if (Time.time > nextAttackTime)
             {
                 nextAttackTime = Time.time + attackTime;
-                Fire();
-
+                Fire();   
             }
         }
     }
@@ -80,6 +83,7 @@ public class PlayerController : MonoBehaviour
 
     void Fire()
     {
+        fireEffect.Play();
         GameObject bullet = Instantiate(bulletPrefab, firePos.transform.position, firePos.transform.rotation);
     }
 }

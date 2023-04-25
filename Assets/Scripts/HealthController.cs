@@ -33,7 +33,7 @@ public class HealthController : MonoBehaviour
             if (Time.time > nextAttackTime)
             {
                 nextAttackTime = Time.time + intervalTime;
-                playerController.currentHealth -= zombiePower;
+                //playerController.currentHealth -= zombiePower;
                 StartCoroutine(HitColor());
             }
         }

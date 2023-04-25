@@ -41,7 +41,7 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
-        enemyRb.velocity = new Vector3(0,0,0);
+        enemyRb.velocity = new Vector3(0, 0, 0);
 
         if (gameObject.CompareTag("Zombie"))
         {
@@ -58,13 +58,13 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    
+
 
     void DemonMoveToPlayer()
     {
         Vector3 playerDemonDistance = player.transform.position - transform.position;
         float distance = Mathf.Sqrt(Mathf.Pow(playerDemonDistance.x, 2) + Mathf.Pow(playerDemonDistance.z, 2));
-        if (distance>demonAttackDistance)
+        if (distance > demonAttackDistance)
         {
             transform.LookAt(player);
             transform.Translate(Vector3.forward * speed * Time.deltaTime);
