@@ -37,13 +37,6 @@ public class BulletController : MonoBehaviour
             }
         }
 
-        if (collision.gameObject.CompareTag("Zombie") || collision.gameObject.CompareTag("Demon"))
-        {
-            if (gameObject.CompareTag("Bullet"))
-            {
-                Destroy(gameObject);
-            }
-        }
         if (collision.gameObject.CompareTag("Player"))
         {
             if (gameObject.CompareTag("DemonBullet"))

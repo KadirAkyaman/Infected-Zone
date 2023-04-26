@@ -26,6 +26,25 @@ public class AnimatorController : MonoBehaviour
                 animator.SetBool("isWalk", true);
                 animator.SetBool("isAttack", false);
             }
+
+            if (enemyController.isDead)
+            {
+                animator.SetBool("isDead", true);
+            }
+        }
+
+        if (gameObject.CompareTag("Demon"))
+        {
+            if (enemyController.attackToPlayer)
+            {
+                animator.SetBool("isMove", false);
+                animator.SetBool("isAttack", true);
+            }
+            else
+            {
+                animator.SetBool("isMove", true);
+                animator.SetBool("isAttack", false);
+            }
         }
 
         if (gameObject.CompareTag("Player"))

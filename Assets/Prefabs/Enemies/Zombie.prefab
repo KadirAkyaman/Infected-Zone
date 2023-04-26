@@ -958,9 +958,12 @@ MonoBehaviour:
   speed: 1
   health: 200
   touchedPlayer: 0
+  attackToPlayer: 0
+  isDead: 0
   xpPrefab: {fileID: 4894815796486279093, guid: 6856711e52b895645b90a081adf02bc9, type: 3}
   bulletPrefab: {fileID: 0}
   demonAttackDistance: 0
+  deathEffect: {fileID: 0}
 --- !u!114 &876394217003326033
 MonoBehaviour:
   m_ObjectHideFlags: 0

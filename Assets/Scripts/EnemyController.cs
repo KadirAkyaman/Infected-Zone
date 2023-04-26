@@ -12,6 +12,12 @@ public class EnemyController : MonoBehaviour
     //TOUCH PLAYER
     public bool touchedPlayer;
 
+    //ATTACK PLAYER
+    public bool attackToPlayer;
+
+    //IS DEAD
+    public bool isDead;
+
     //XP Components
     [SerializeField] GameObject xpPrefab;
 
@@ -28,6 +34,8 @@ public class EnemyController : MonoBehaviour
     //Attach BulletController Script
     GameManager gameManager;
 
+    //Demon Death Effect
+    [SerializeField] GameObject deathEffect;
     void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
@@ -68,6 +76,7 @@ public class EnemyController : MonoBehaviour
         {
             transform.LookAt(player);
             transform.Translate(Vector3.forward * speed * Time.deltaTime);
+            attackToPlayer = false;
         }
         else
         {
@@ -76,6 +85,7 @@ public class EnemyController : MonoBehaviour
             {
                 nextAttackTime = Time.time + intervalTime;
                 DemonAttack();
+                attackToPlayer = true;
 
             }
         }
@@ -84,16 +94,20 @@ public class EnemyController : MonoBehaviour
     void DemonAttack()
     {
         GameObject bullet = Instantiate(bulletPrefab, demonFirePos.transform.position, demonFirePos.transform.rotation);
+
     }
 
     void ZombieMoveToPlayer()
     {
-        transform.LookAt(player);//player adlý objeye döndür
-        transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
-        transform.position = new Vector3(transform.position.x, -0.51f, transform.position.z);
-        if (!touchedPlayer)
+        if (!isDead)
         {
-            transform.Translate(Vector3.forward * speed * Time.deltaTime);//Player adlý objeye doðru hareket et
+            transform.LookAt(player);//player adlý objeye döndür
+            transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
+            transform.position = new Vector3(transform.position.x, -0.51f, transform.position.z);
+            if (!touchedPlayer)
+            {
+                transform.Translate(Vector3.forward * speed * Time.deltaTime);//Player adlý objeye doðru hareket et
+            }
         }
     }
 
@@ -103,12 +117,32 @@ public class EnemyController : MonoBehaviour
         {
             if (gameObject.CompareTag("Demon"))
             {
-                //isDead = true;
+                StartCoroutine(DemonDeathEffect());
             }
-            Destroy(gameObject);
-            GameObject xp = Instantiate(xpPrefab, transform.position, xpPrefab.transform.rotation);
+            if (gameObject.CompareTag("Zombie"))
+            {
+
+                StartCoroutine(ZombieDeathEffect());
+            }
         }
     }
+
+    IEnumerator ZombieDeathEffect() {
+        isDead = true;
+        yield return new WaitForSeconds(2);
+        GameObject xp = Instantiate(xpPrefab, transform.position, xpPrefab.transform.rotation);
+        Destroy(gameObject);
+    }
+    IEnumerator DemonDeathEffect()
+    {
+        GameObject xp = Instantiate(xpPrefab, transform.position, xpPrefab.transform.rotation);
+        GameObject deathEffectPrefab = Instantiate(deathEffect, gameObject.transform.position, deathEffect.transform.rotation);
+        Destroy(gameObject);
+        yield return new WaitForSeconds(3);
+        Destroy(deathEffectPrefab);
+        
+    }
+
 
     private void OnCollisionEnter(Collision collision)
     {

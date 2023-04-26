@@ -32,17 +32,12 @@ public class ExplosionController : MonoBehaviour
         {
             Rigidbody rb = hit.GetComponent<Rigidbody>();
 
-            if (rb != null && !rb.gameObject.CompareTag("Player") && !rb.gameObject.CompareTag("Wall") && !rb.gameObject.CompareTag("Xp"))
+            if (rb != null && !rb.gameObject.CompareTag("Player") && !rb.gameObject.CompareTag("Wall") && !rb.gameObject.CompareTag("Xp") && !rb.CompareTag("Demon")) 
             {
                 rb.AddExplosionForce(explosionForce, transform.position, explosionRadius);
                 if (rb.CompareTag("Zombie"))
                 {
                     Instantiate(xpPrefab[0], rb.transform.position, xpPrefab[0].transform.rotation);//Zombie    
-                    Destroy(rb.gameObject);
-                }
-                if (rb.CompareTag("Demon"))
-                {
-                    Instantiate(xpPrefab[1], rb.transform.position, xpPrefab[1].transform.rotation);//Demon
                     Destroy(rb.gameObject);
                 }
             }

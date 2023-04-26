@@ -369,6 +369,8 @@
 "Assets/AssetStore/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_AutoRotate.cs"
 "Assets/AssetStore/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_LightFlicker.cs"
 "Assets/AssetStore/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_LightIntensityFade.cs"
+"Assets/AssetStore/TAZO_3D_C/DemoScene/Action_Manage.cs"
+"Assets/AssetStore/TAZO_3D_C/DemoScene/demo.cs"
 "Assets/Scripts/AnimatorController.cs"
 "Assets/Scripts/BulletController.cs"
 "Assets/Scripts/CameraController.cs"

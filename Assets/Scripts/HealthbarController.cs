@@ -12,7 +12,7 @@ public class HealthbarController : MonoBehaviour
     EnemyController enemyController;
     void Start()
     {
-        if (gameObject.CompareTag("Zombie"))
+        if (gameObject.CompareTag("Zombie") || gameObject.CompareTag("Demon"))
         {
             enemyController = GetComponent<EnemyController>();
             maxHealth = enemyController.health;
