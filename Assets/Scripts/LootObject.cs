@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class LootObject : MonoBehaviour
 {
+    //Attach Scripts
     PlayerController playerController;
+    GameManager gameManager;
+
     public float healthAmount;
     public float speedAmount;
-    public float boostAmount;
+    public int boostAmount;
 
     //Effects
     GameObject boostEffect;
@@ -18,6 +21,8 @@ public class LootObject : MonoBehaviour
     void Start()
     {
         playerController = GameObject.Find("Player").GetComponent<PlayerController>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+
         boostEffect = GameObject.Find("BoostEffect");
         boostEffect.SetActive(false);
         healEffect = GameObject.Find("HealEffect");
@@ -96,11 +101,11 @@ public class LootObject : MonoBehaviour
 
     IEnumerator WeaponBoost()
     {
-        playerController.firePower *= boostAmount;
+        gameManager.bulletPower *= boostAmount;
         boostEffect.SetActive(true);                  //FIRE POWER * 2
         yield return new WaitForSeconds(10);
         boostEffect.SetActive(false);
-        playerController.firePower /= boostAmount;
+        gameManager.bulletPower /= boostAmount;
     }
 
 }

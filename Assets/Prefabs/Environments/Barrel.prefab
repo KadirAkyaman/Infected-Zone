@@ -174,6 +174,9 @@ MonoBehaviour:
   - {fileID: 2433282508537954060, guid: 3ef3ae421f71c5c4e97fe12dc2fc6312, type: 3}
   explosionForce: 1000
   explosionRadius: 5
+  xpPrefab:
+  - {fileID: 4894815796486279093, guid: 6856711e52b895645b90a081adf02bc9, type: 3}
+  - {fileID: 3486317786764072223, guid: de8ac2c8acfb3924d9d168ee8584b5b7, type: 3}
 --- !u!1 &8860487139651430790
 GameObject:
   m_ObjectHideFlags: 0

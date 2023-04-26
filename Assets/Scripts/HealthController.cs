@@ -33,19 +33,19 @@ public class HealthController : MonoBehaviour
             if (Time.time > nextAttackTime)
             {
                 nextAttackTime = Time.time + intervalTime;
-                //playerController.currentHealth -= zombiePower;
-                StartCoroutine(HitColor());
+                playerController.currentHealth -= zombiePower;
+                //StartCoroutine(HitColor());
             }
         }
     }
 
-    IEnumerator HitColor()
-    {
-        yield return new WaitForSeconds(0.3f);
-        playerMesh.material = materials[1];
-        yield return new WaitForSeconds(0.2f);
-        playerMesh.material = materials[0];
-    }
+    //IEnumerator HitColor()
+    //{
+    //    yield return new WaitForSeconds(0.3f);
+    //    playerMesh.material = materials[1];
+    //    yield return new WaitForSeconds(0.2f);
+    //    playerMesh.material = materials[0];
+    //}
 
 
     private void OnCollisionEnter(Collision collision)
@@ -53,7 +53,7 @@ public class HealthController : MonoBehaviour
         if (collision.gameObject.CompareTag("DemonBullet"))
         {
             playerController.currentHealth -= gameManager.demonBulletPower;
-            StartCoroutine(HitColor());
+            //StartCoroutine(HitColor());
         }
     }
 

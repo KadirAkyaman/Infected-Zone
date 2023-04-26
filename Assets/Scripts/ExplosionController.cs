@@ -8,6 +8,9 @@ public class ExplosionController : MonoBehaviour
     public float explosionForce = 1000.0f; // Fýrlatma kuvveti
     public float explosionRadius = 5.0f; // Patlama yarýçapý
 
+    //XP
+    [SerializeField] List<GameObject> xpPrefab;
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Bullet") || collision.gameObject.CompareTag("DemonBullet"))
@@ -32,7 +35,16 @@ public class ExplosionController : MonoBehaviour
             if (rb != null && !rb.gameObject.CompareTag("Player") && !rb.gameObject.CompareTag("Wall") && !rb.gameObject.CompareTag("Xp"))
             {
                 rb.AddExplosionForce(explosionForce, transform.position, explosionRadius);
-                Destroy(rb.gameObject);
+                if (rb.CompareTag("Zombie"))
+                {
+                    Instantiate(xpPrefab[0], rb.transform.position, xpPrefab[0].transform.rotation);//Zombie    
+                    Destroy(rb.gameObject);
+                }
+                if (rb.CompareTag("Demon"))
+                {
+                    Instantiate(xpPrefab[1], rb.transform.position, xpPrefab[1].transform.rotation);//Demon
+                    Destroy(rb.gameObject);
+                }
             }
         }
 

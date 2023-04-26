@@ -6,7 +6,7 @@ public class EnemyController : MonoBehaviour
 {
     [SerializeField] Transform player;
     [SerializeField] float speed;
-    [SerializeField] int health;
+    public int health;
     Rigidbody enemyRb;
 
     //TOUCH PLAYER

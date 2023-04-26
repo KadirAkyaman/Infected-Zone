@@ -6,6 +6,9 @@ public class PlayerController : MonoBehaviour
 {
     Rigidbody playerRb;
 
+    //Player Power
+    public float playerPower;
+
     //Camera
     [SerializeField] Camera mainCamera;
 
