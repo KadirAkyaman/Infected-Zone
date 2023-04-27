@@ -21,6 +21,7 @@ TagManager:
   - Barrel
   - Boost
   - ZombieHealth
+  - OrbitalStrike
   layers:
   - Default
   - TransparentFX

@@ -63,6 +63,17 @@ public class BulletController : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)                                                 //SKILL TRIGGER
+    {
+        if (gameObject.CompareTag("DemonBullet"))
+        {
+            if (other.gameObject.CompareTag("OrbitalStrike"))
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
+
     void MoveToPlayer()
     {
         if (gameObject.CompareTag("DemonBullet"))

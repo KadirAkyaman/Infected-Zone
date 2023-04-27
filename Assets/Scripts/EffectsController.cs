@@ -55,11 +55,20 @@ public class EffectsController : MonoBehaviour
                 // Efektin belirtilen süre sonra yok edilmesi için Invoke metodu kullanýlýr
                 Invoke("DestroyEffect", effectDuration);
             }
+
+
         }
 
 
     }
 
+    void OnTriggerEnter(Collider other)                                                             //SKILL
+    {
+        if (gameObject.CompareTag("DemonBullet") && other.CompareTag("OrbitalStrike"))
+        {
+            Instantiate(collisionEffectPrefab[0], transform.position, Quaternion.identity);
+        }
+    }
 
     private void DestroyEffect()
     {

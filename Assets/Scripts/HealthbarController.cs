@@ -10,6 +10,7 @@ public class HealthbarController : MonoBehaviour
 
     //Attach EnemyController
     EnemyController enemyController;
+    PlayerController playerController;
     void Start()
     {
         if (gameObject.CompareTag("Zombie") || gameObject.CompareTag("Demon"))
@@ -17,10 +18,22 @@ public class HealthbarController : MonoBehaviour
             enemyController = GetComponent<EnemyController>();
             maxHealth = enemyController.health;
         }
+        if (gameObject.CompareTag("Player"))
+        {
+            playerController = GetComponent<PlayerController>();
+            maxHealth = playerController.maxHealth;
+        }
     }
 
     void Update()
     {
-        health.fillAmount = enemyController.health / maxHealth;
+        if (gameObject.CompareTag("Zombie") || gameObject.CompareTag("Demon"))
+        {
+            health.fillAmount = enemyController.health / maxHealth;
+        }
+        if (gameObject.CompareTag("Player"))
+        {
+            health.fillAmount = playerController.currentHealth / maxHealth;
+        }
     }
 }

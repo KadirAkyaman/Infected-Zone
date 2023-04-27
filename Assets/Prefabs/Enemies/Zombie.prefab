@@ -865,6 +865,7 @@ GameObject:
   - component: {fileID: 930526481942307851}
   - component: {fileID: 993819559749359679}
   - component: {fileID: 876394217003326028}
+  - component: {fileID: 6673447584733992554}
   - component: {fileID: 876394217003326033}
   - component: {fileID: 1817531750}
   m_Layer: 0
@@ -964,6 +965,18 @@ MonoBehaviour:
   bulletPrefab: {fileID: 0}
   demonAttackDistance: 0
   deathEffect: {fileID: 0}
+--- !u!114 &6673447584733992554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 877543582807431835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18a10ca661651744090e94adecd60055, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &876394217003326033
 MonoBehaviour:
   m_ObjectHideFlags: 0

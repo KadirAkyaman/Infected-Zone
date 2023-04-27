@@ -44,7 +44,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.6207441, b: 0.20392156, a: 0.015686275}
-  m_Intensity: 4.6129646
+  m_Intensity: 4.9305463
   m_Range: 1.5
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -4933,6 +4933,7 @@ GameObject:
   - component: {fileID: -5642561961995199121}
   - component: {fileID: 603795661676667275}
   - component: {fileID: 4486945629050561915}
+  - component: {fileID: 6187049440623161737}
   m_Layer: 0
   m_Name: DemonBullet
   m_TagString: DemonBullet
@@ -9919,7 +9920,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.7
+  m_Radius: 0.31
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4486945629050561915
 MonoBehaviour:
@@ -9933,3 +9934,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b2f7f668bb914647a5b8f96c03e0230, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6187049440623161737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6962493313955919527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3abe67bac40bd1f49951902a1cbc4969, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionEffectPrefab:
+  - {fileID: 5407319458275606740, guid: 8d68f7716dde9094cb08bcce5e226fe0, type: 3}
+  effectDuration: 2
