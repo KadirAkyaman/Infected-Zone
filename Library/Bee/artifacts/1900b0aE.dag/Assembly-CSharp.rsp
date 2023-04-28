@@ -384,6 +384,7 @@
 "Assets/Scripts/PlayerController.cs"
 "Assets/Scripts/Skills/EnemyDamageController.cs"
 "Assets/Scripts/Skills/FollowPlayer.cs"
+"Assets/Scripts/Skills/Karna'sShield/KarnasShield.cs"
 "Assets/Scripts/Skills/OrbitalStrike/OrbitalStrike.cs"
 "Assets/Scripts/Skills/OrbitalStrike/OrbitalStrikeEffectsController.cs"
 "Assets/Scripts/Skills/Thunderstorm/Thunderstorm.cs"
