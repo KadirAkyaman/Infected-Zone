@@ -22,6 +22,7 @@ TagManager:
   - Boost
   - ZombieHealth
   - OrbitalStrike
+  - Thunderstorm
   layers:
   - Default
   - TransparentFX

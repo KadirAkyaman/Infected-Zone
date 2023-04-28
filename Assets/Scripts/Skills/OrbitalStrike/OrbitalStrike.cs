@@ -59,5 +59,4 @@ public class OrbitalStrike : MonoBehaviour
             child.RotateAround(transform.position, Vector3.up, speed * Time.deltaTime);
         }
     }
-
 }

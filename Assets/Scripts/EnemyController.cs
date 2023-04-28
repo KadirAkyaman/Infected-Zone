@@ -121,7 +121,6 @@ public class EnemyController : MonoBehaviour
             }
             if (gameObject.CompareTag("Zombie"))
             {
-
                 StartCoroutine(ZombieDeathEffect());
             }
         }
@@ -129,6 +128,10 @@ public class EnemyController : MonoBehaviour
 
     IEnumerator ZombieDeathEffect() {
         isDead = true;
+        CapsuleCollider collider = new CapsuleCollider();
+        collider = GetComponent<CapsuleCollider>();
+        collider.isTrigger = true;
+
         yield return new WaitForSeconds(2);
         GameObject xp = Instantiate(xpPrefab, transform.position, xpPrefab.transform.rotation);
         Destroy(gameObject);

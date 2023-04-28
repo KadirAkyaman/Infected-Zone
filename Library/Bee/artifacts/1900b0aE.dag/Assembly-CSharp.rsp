@@ -386,6 +386,8 @@
 "Assets/Scripts/Skills/FollowPlayer.cs"
 "Assets/Scripts/Skills/OrbitalStrike/OrbitalStrike.cs"
 "Assets/Scripts/Skills/OrbitalStrike/OrbitalStrikeEffectsController.cs"
+"Assets/Scripts/Skills/Thunderstorm/Thunderstorm.cs"
+"Assets/Scripts/Skills/Thunderstorm/ThunderstormController.cs"
 "Assets/Scripts/SpawnManager.cs"
 "Assets/Scripts/UIController.cs"
 "Assets/Scripts/XPController.cs"
