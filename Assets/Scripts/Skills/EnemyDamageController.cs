@@ -14,7 +14,7 @@ public class EnemyDamageController : MonoBehaviour
         enemyController = GetComponent<EnemyController>();
 
         //OrbitalStrike
-        orbitalStrike = GameObject.Find("Skill Manager").GetComponent<OrbitalStrike>();
+        orbitalStrike = GameObject.Find("OrbitalStrike").GetComponent<OrbitalStrike>();
     }
 
 
