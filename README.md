@@ -20,6 +20,6 @@ Infected Zone is a top-down game in which players fight hordes of zombies and co
 
 
 
-# OYUN İÇİ GÖRÜNTÜLER / IN-GAME VISUALS
+# Oyun İçi Görseller / In-Game Visuals
 
 ![Screenshot_2](https://user-images.githubusercontent.com/101833015/235348556-fc5a6407-5cc6-4082-9adb-6679b0428305.png)
