@@ -382,7 +382,7 @@
 "Assets/Scripts/HealthController.cs"
 "Assets/Scripts/LootObject.cs"
 "Assets/Scripts/PlayerController.cs"
-"Assets/Scripts/Skills/ChainReaction/ChainReaction.cs"
+"Assets/Scripts/Skills/Bullet Skills/ChainReaction/ChainBulletController.cs"
 "Assets/Scripts/Skills/EnemyDamageController.cs"
 "Assets/Scripts/Skills/FollowPlayer.cs"
 "Assets/Scripts/Skills/Karna'sShield/KarnasShield.cs"

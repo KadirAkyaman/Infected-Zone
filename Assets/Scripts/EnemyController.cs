@@ -151,7 +151,7 @@ public class EnemyController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
-            transform.position -= transform.forward * gameManager.bulletPower * Time.deltaTime;
+            transform.position -= transform.forward * gameManager.bulletPower/4 * Time.deltaTime;               //Geri Ýtme
             health -= gameManager.bulletPower;
         }
 

@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: -5888605748208636046}
   - component: {fileID: 4119742476295038344}
   - component: {fileID: -4315465412449842376}
-  - component: {fileID: -2424883874260779486}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Bullet
@@ -147,20 +146,3 @@ CapsuleCollider:
   m_Height: 0.13280044
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0.21756418}
---- !u!114 &-2424883874260779486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7250735518577988254}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8e2ec732b43e6d42bda184ccf016725, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chainBulletSpeed: 10
-  chainBulletBounce: 5
-  targetLayer:
-    serializedVersion: 2
-    m_Bits: 2147483647
