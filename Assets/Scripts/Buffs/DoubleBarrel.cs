@@ -4,13 +4,6 @@ using UnityEngine;
 
 public class DoubleBarrel : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
+    public int bulletCount;
+    public float bulletDistance;
 }

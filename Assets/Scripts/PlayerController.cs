@@ -38,6 +38,7 @@ public class PlayerController : MonoBehaviour
 
     //BUFFS
     GeminiShot geminiShot;
+    DoubleBarrel doubleBarrel;
 
     void Start()
     {
@@ -47,6 +48,7 @@ public class PlayerController : MonoBehaviour
 
         //BUFFS
         geminiShot = GameObject.Find("Buff Manager").GetComponent<GeminiShot>();
+        doubleBarrel = GameObject.Find("Buff Manager").GetComponent<DoubleBarrel>();
     }
 
     private void FixedUpdate()
@@ -64,7 +66,7 @@ public class PlayerController : MonoBehaviour
             if (Time.time > nextAttackTime)
             {
                 nextAttackTime = Time.time + attackTime;
-                for (int i = 0; i < geminiShot.bulletCount; i++)
+                for (int i = 0; i < geminiShot.bulletCount; i++)//                                  GEMINI SHOT
                 {
                     Invoke("Fire", i * geminiShot.bulletDelay);
                 }
@@ -95,6 +97,25 @@ public class PlayerController : MonoBehaviour
     public void Fire()
     {
         fireEffect.Play();
-        GameObject bullet = Instantiate(bulletPrefab, firePos.transform.position, firePos.transform.rotation);
+        //                                                                                          DOUBLE BARREL
+        if (doubleBarrel.bulletCount < 1)
+        {
+            return;
+        }
+        else if (doubleBarrel.bulletCount == 1)
+        {
+            GameObject bullet = Instantiate(bulletPrefab, firePos.transform.position, firePos.transform.rotation);
+        }
+        else
+        {
+            float totalBulletDistance = (doubleBarrel.bulletCount - 1) * doubleBarrel.bulletDistance;
+            Vector3 firstBulletOffset = -firePos.transform.right * totalBulletDistance / 2;
+
+            for (int i = 0; i < doubleBarrel.bulletCount; i++)
+            {
+                Vector3 offset = firstBulletOffset + i * doubleBarrel.bulletDistance * firePos.transform.right;
+                GameObject bullet = Instantiate(bulletPrefab, firePos.transform.position + offset, firePos.transform.rotation);
+            }
+        }
     }
 }
