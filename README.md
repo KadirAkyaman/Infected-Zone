@@ -17,15 +17,19 @@ Infected Zone is a top-down game in which players fight hordes of zombies and co
 Infected Zone'da yetenekler karakterin saldırı ve savunma becerilerini geliştirmek için kullanılan özel güçlerdir. Her üç seviye de bir kez yetenek güçlendirme paneli açılır ve oyuncu bu yetenek penceresinden istediğini seçerek oyununa devam eder. Seçilen yetenekler daha fazla seçilerek bonus özellikleri açılır.
 
 -Orbital Strike
+
     Elektrik yüklemeli küreler oluşturarak, karakterin etrafında dönen bir elektrik alanı oluşturur ve bu küreler temas ettikleri düşmanlara hasar verir.
     
 -Thunderbolt
+
     Belirli bir alan içindeki düşmanlara zarar verir. Bu yetenek özellikle yoğun düşman gruplarına karşı kullanışlıdır.
     
 -Karnas Shield
+
     Karakterin etrafında Karnas'ın kalkanlarını oluşturur. Karnas'ın kalkanları uzak menzilli saldırılardan korunmaya yardımcı olur.
 
 -Fierce Assault 
+
     Fierce Assault yeteneği, karakterin düşmanlara daha fazla hasar vermesini sağlar. Bu yetenek etkinleştirildiğinde, karakterin saldırı gücü artar ve düşmanlar daha fazla hasar alır.
     
 
@@ -33,12 +37,15 @@ Infected Zone'da yetenekler karakterin saldırı ve savunma becerilerini gelişt
 Mermiler oyundaki stratejinizi belirleme konusunda çok önemlidir. BOSS savaşlarından kazandığınız paralar ile kalıcı mermiler satın alabilir, bu mermiler sayesinde zorlu rakipleri kolaylıkla alt edebilirsiniz. Ayrıca seviye atladıkça seçtiğiniz merminin güçleri de artmaktadır.
 
 -Bullet
+
     Oyuncuların başlangıçta sahip oldukları standart mühimmat türüdür. En temel ve doğrudan hasar veren mermidir.
     
 -Chain Reaction
+
     Bu mermi türü adeta bir zincirleme reaksiyon gibi hedefe yakın mesafedeki düşmanlara da seker.
    
 -Impact Blast   
+
     Impact Blast mermisi, etkileşime girdiği düşmanlara ve yakınındaki düşmanlara patlayıcı hasar verir.
 
 
@@ -46,15 +53,19 @@ Mermiler oyundaki stratejinizi belirleme konusunda çok önemlidir. BOSS savaşl
 Bufflar, Infected Zone'da karakterin mermilerini etkileyen genel özelliklerdir. Oyuncunun silahlarını geliştirir ve zombileri yenmek için farklı stratejiler kullanmalarına olanak tanır. Oyuncu her seviye atladığında bir adet güçlendirme hakkı kazanır. Rastgele gelen güçlendirme penceresinden birisini seçerek karakterinizi yenilmez hale getirebilirsiniz.
 
 -Gemini Shot
+
     Karakterin hızlı bir şekilde ardışık ateş etmesine olanak tanır.
   
 -Double Barrel  
+
     Karakterin aynı anda birden fazla mermi ateşlemesine olanak tanır
     
 -Swift Stride
+
     Swift Stride, karakterin hızını arttırarak ona daha çevik ve hızlı bir hareket kabiliyeti sağlar.
     
 -Health Surge
+
     Health Surge, karakterin sağlık puanlarını kalıcı olarak arttıran bir yetenektir. Bu yetenek sayesinde karakter daha dayanıklı hale gelir ve daha fazla hasar almadan daha uzun süre hayatta kalabilir.
 
 
