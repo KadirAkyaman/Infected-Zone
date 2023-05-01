@@ -18,13 +18,13 @@ public class PlayerController : MonoBehaviour
     float verticalInput;
 
     //Fire
-    [SerializeField] GameObject bulletPrefab;
+    public GameObject bulletPrefab;
     [SerializeField] Transform firePos;
     public float firePower;
 
     //Attack Time Components
     float nextAttackTime = 0f;
-    [SerializeField] float attackTime;
+    public float attackTime;
 
     //Health
     public float maxHealth;
@@ -36,12 +36,17 @@ public class PlayerController : MonoBehaviour
     //Fire Effect
     [SerializeField] ParticleSystem fireEffect;
 
+    //BUFFS
+    GeminiShot geminiShot;
 
     void Start()
     {
         playerRb = GetComponent<Rigidbody>();
         currentHealth = maxHealth;
         playerXp = 0;
+
+        //BUFFS
+        geminiShot = GameObject.Find("Buff Manager").GetComponent<GeminiShot>();
     }
 
     private void FixedUpdate()
@@ -59,7 +64,10 @@ public class PlayerController : MonoBehaviour
             if (Time.time > nextAttackTime)
             {
                 nextAttackTime = Time.time + attackTime;
-                Fire();   
+                for (int i = 0; i < geminiShot.bulletCount; i++)
+                {
+                    Invoke("Fire", i * geminiShot.bulletDelay);
+                }
             }
         }
     }
@@ -84,7 +92,7 @@ public class PlayerController : MonoBehaviour
         transform.rotation = Quaternion.LookRotation(direction);
     }
 
-    void Fire()
+    public void Fire()
     {
         fireEffect.Play();
         GameObject bullet = Instantiate(bulletPrefab, firePos.transform.position, firePos.transform.rotation);

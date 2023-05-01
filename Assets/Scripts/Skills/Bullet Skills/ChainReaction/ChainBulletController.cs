@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class ChainBulletController : MonoBehaviour
 {
     //Game Manager Attach
@@ -52,12 +51,17 @@ public class ChainBulletController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Zombie") || collision.gameObject.CompareTag("Demon"))
         {
-            Debug.Log(enemyCount + "" + bounceLimit);
+
             enemy[enemyCount] = collision.gameObject;
             enemyCount++;
 
             ObjectSelector();
 
+        }
+
+        if (collision.gameObject.CompareTag("Wall")||collision.gameObject.CompareTag("Barrel"))
+        {
+            Destroy(gameObject);
         }
 
         if (collision.gameObject.CompareTag("DemonBullet"))
@@ -98,7 +102,7 @@ public class ChainBulletController : MonoBehaviour
             if (!(collider.CompareTag("Zombie") || collider.CompareTag("Demon")) || isEnemy)
             {
                 continue;
-            }
+            }   
 
             EnemyController enemyController;
             enemyController = collider.gameObject.GetComponent<EnemyController>();

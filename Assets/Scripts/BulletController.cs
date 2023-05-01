@@ -67,7 +67,7 @@ public class BulletController : MonoBehaviour
     {
         if (gameObject.CompareTag("DemonBullet"))
         {
-            if (other.gameObject.CompareTag("OrbitalStrike"))
+            if (other.gameObject.CompareTag("KarnasShield"))
             {
                 Destroy(gameObject);
             }

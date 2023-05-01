@@ -24,7 +24,7 @@ public class EnemyController : MonoBehaviour
 
     //Demon Attack
     [SerializeField] GameObject bulletPrefab;
-    Transform demonFirePos;
+    public Transform demonFirePos;
     [SerializeField] float demonAttackDistance;
 
     //Attack Time Components
@@ -50,6 +50,12 @@ public class EnemyController : MonoBehaviour
     void Update()
     {
         enemyRb.velocity = new Vector3(0, 0, 0);
+        if (gameObject.CompareTag("Demon"))
+        {
+            Vector3 bulletPos = bulletPrefab.transform.position;
+            bulletPos.y = demonFirePos.transform.position.y;
+            bulletPrefab.transform.position = bulletPos;
+        }
 
         if (gameObject.CompareTag("Zombie"))
         {

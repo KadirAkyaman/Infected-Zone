@@ -23,6 +23,8 @@ TagManager:
   - ZombieHealth
   - OrbitalStrike
   - Thunderstorm
+  - KarnasShield
+  - BuffManager
   layers:
   - Default
   - TransparentFX
