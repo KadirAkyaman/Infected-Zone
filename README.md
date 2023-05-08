@@ -36,7 +36,7 @@ Infected Zone'da yetenekler karakterin saldırı ve savunma becerilerini gelişt
 # MERMİLER - BULLETS
 Mermiler oyundaki stratejinizi belirleme konusunda çok önemlidir. BOSS savaşlarından kazandığınız paralar ile kalıcı mermiler satın alabilir, bu mermiler sayesinde zorlu rakipleri kolaylıkla alt edebilirsiniz. Ayrıca seviye atladıkça seçtiğiniz merminin güçleri de artmaktadır.
 
--Bullet
+-Default Bullet
 
     Oyuncuların başlangıçta sahip oldukları standart mühimmat türüdür. En temel ve doğrudan hasar veren mermidir.
     
