@@ -14,7 +14,7 @@ Infected Zone is a top-down game in which players fight hordes of zombies and co
 
 
 # YETENEKLER - SKILLS
-Infected Zone'da yetenekler karakterin saldırı ve savunma becerilerini geliştirmek için kullanılan özel güçlerdir. Her üç seviye de bir kez yetenek güçlendirme paneli açılır ve oyuncu bu yetenek penceresinden istediğini seçerek oyununa devam eder. Seçilen yetenekler daha fazla seçilerek bonus özellikleri açılır.
+Infected Zone'da yetenekler karakterin saldırı ve savunma becerilerini geliştirmek için kullanılan özel güçlerdir. Her üç seviye de bir kez yetenek güçlendirme paneli açılır ve oyuncu bu yetenek penceresinden istediğini seçerek oyununa devam eder. Seçilen yetenekler tekrardan seçilerek bonus özellikleri açılır.
 
 -Orbital Strike
 
